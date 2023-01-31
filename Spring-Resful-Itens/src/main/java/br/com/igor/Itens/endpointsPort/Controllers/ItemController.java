@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import br.com.igor.Itens.endpointsPort.Services.ItemService;
 import br.com.igor.Itens.endpointsPort.dataVO.ItemVO;
-import br.com.igor.Itens.endpointsPort.model.Item;
 
 @RestController
 @RequestMapping("/item/v1")
@@ -26,7 +25,7 @@ public class ItemController {
     }
 
     @GetMapping("/{id}")
-    public ItemVO findById(@PathVariable(value = "id") Long id) throws Exception{
+    public ItemVO findById(@PathVariable(value = "id") Long id)  {
         return service.findById(id);
     }
     
