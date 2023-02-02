@@ -6,10 +6,13 @@ import java.time.LocalDate;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.github.dozermapper.core.Mapping;
 
+import br.com.igor.Itens.endpointsPort.Serializable.LocalDateSerializer;
 
-@JsonPropertyOrder({"id",})
+
+@JsonPropertyOrder({"id","Name","Description","Price","Since"})
 public class ItemVO implements Serializable {
 
     
@@ -24,11 +27,12 @@ public class ItemVO implements Serializable {
     @JsonProperty("Description")
     private String description;
 
-    @JsonProperty("price")
+    @JsonProperty("Price")
     private Double price;
 
     @JsonProperty("Since")
-    @JsonFormat(pattern = "dd/MM/yyyy")
+    @JsonFormat(pattern = "yyyy/MM/dd")
+    @JsonSerialize(using = LocalDateSerializer.class)
     private LocalDate since;
 
 

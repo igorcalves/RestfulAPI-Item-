@@ -1,5 +1,5 @@
 CREATE TABLE IF NOT EXISTS `itens` (
-  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `id` bigint(20) NOT NULL AUTO_INCREMENT START WITH 16,
   `name` varchar(255) NOT NULL,
   `description` varchar(255) NOT NULL,
   `since` datetime(6) NOT NULL,
