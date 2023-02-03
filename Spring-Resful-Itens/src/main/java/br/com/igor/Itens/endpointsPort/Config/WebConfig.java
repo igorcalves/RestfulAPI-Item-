@@ -9,10 +9,8 @@ import org.springframework.http.MediaType;
 import org.springframework.http.converter.HttpMessageConverter;
 import org.springframework.web.servlet.config.annotation.ContentNegotiationConfigurer;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
-
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.module.SimpleModule;
-
 import br.com.igor.Itens.endpointsPort.Serializable.LocalDateSerializer;
 import br.com.igor.Itens.endpointsPort.Serializable.YamilJackson2HttpMessasgeConverter;
 

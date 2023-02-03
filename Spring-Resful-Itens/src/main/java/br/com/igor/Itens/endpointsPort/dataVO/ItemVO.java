@@ -3,7 +3,6 @@ package br.com.igor.Itens.endpointsPort.dataVO;
 import java.io.Serializable;
 import java.time.LocalDate;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
@@ -31,7 +30,6 @@ public class ItemVO implements Serializable {
     private Double price;
 
     @JsonProperty("Since")
-    @JsonFormat(pattern = "yyyy/MM/dd")
     @JsonSerialize(using = LocalDateSerializer.class)
     private LocalDate since;
 
