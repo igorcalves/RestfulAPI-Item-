@@ -23,7 +23,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.tags.Tag;
 
 @RestController
-@RequestMapping("/v1/item")
+@RequestMapping("/api/item/v1")
 @Tag(name = "Item", description = "Endpoints for Managing Itens")
 public class ItemController {
 
