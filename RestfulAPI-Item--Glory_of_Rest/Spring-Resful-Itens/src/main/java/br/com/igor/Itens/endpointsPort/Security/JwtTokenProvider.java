@@ -79,7 +79,6 @@ public class JwtTokenProvider {
     private String getAccessToken(String username, List<String> roles, Date now, Date validity) {
         String issuerUrl = ServletUriComponentsBuilder
         .fromCurrentContextPath().build().toUriString();
-
         return JWT.create()
             .withClaim("roles", roles)
             .withIssuedAt(now)

@@ -31,7 +31,7 @@ public class User implements UserDetails{
 	private Long id;
 	
 	@Column(name = "user_name",unique = true)
-	private String userName;
+	private String username;
 	
 	@Column (name = "full_name")
 	private String fullName;
@@ -86,7 +86,7 @@ public class User implements UserDetails{
 
 	@Override
 	public String getUsername() {
-		return this.userName;
+		return this.username;
 	}
 
 	@Override
@@ -121,12 +121,12 @@ public class User implements UserDetails{
 
 
 	public String getUserName() {
-		return userName;
+		return username;
 	}
 
 
 	public void setUserName(String userName) {
-		this.userName = userName;
+		this.username = userName;
 	}
 
 
@@ -198,7 +198,7 @@ public class User implements UserDetails{
 	@Override
 	public int hashCode() {
 		return Objects.hash(accountnonexpired, accountnonlocked, credentialsnonexpired, enabled, fullName, id, password,
-				permissions, userName);
+				permissions, username);
 	}
 
 
@@ -216,7 +216,7 @@ public class User implements UserDetails{
 				&& Objects.equals(credentialsnonexpired, other.credentialsnonexpired)
 				&& Objects.equals(enabled, other.enabled) && Objects.equals(fullName, other.fullName)
 				&& Objects.equals(id, other.id) && Objects.equals(password, other.password)
-				&& Objects.equals(permissions, other.permissions) && Objects.equals(userName, other.userName);
+				&& Objects.equals(permissions, other.permissions) && Objects.equals(username, other.username);
 	}
 	
 	

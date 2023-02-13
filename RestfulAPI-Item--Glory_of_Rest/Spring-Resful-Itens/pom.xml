@@ -15,7 +15,7 @@
 		<properties>
 		<java.version>19</java.version>
 		<dozer.version>6.4.0</dozer.version>
-		<java-jwt.version>3.18.3</java-jwt.version>
+		<java-jwt.version>4.2.2</java-jwt.version>
 	</properties>
 	<dependencies>
 		<dependency>

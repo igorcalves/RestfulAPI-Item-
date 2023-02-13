@@ -14,9 +14,9 @@ public class toma {
 	  encoders.put("pbkdf2", new Pbkdf2PasswordEncoder
       ("static-salt", 8, 185000, SecretKeyFactoryAlgorithm.PBKDF2WithHmacSHA256));
 	  DelegatingPasswordEncoder passwordEncoder = new DelegatingPasswordEncoder("pbkdf2", encoders);
-	  passwordEncoder.setDefaultPasswordEncoderForMatches(new Pbkdf2PasswordEncoder("", 8, 185000, SecretKeyFactoryAlgorithm.PBKDF2WithHmacSHA256));
+	  passwordEncoder.setDefaultPasswordEncoderForMatches(new Pbkdf2PasswordEncoder("static-salt", 8, 185000, SecretKeyFactoryAlgorithm.PBKDF2WithHmacSHA256));
 	  
-	  String result = passwordEncoder.encode("");
+	  String result = passwordEncoder.encode("4044");
 	  System.out.println("My hash " + result);
     }
     
